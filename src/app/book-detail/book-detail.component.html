@@ -1,0 +1,14 @@
+<div *ngIf="book">
+
+  <h2>{{book.name | uppercase}} </h2>
+  <div class = "split"><span>id: </span>{{book.id}}</div>
+  <div class = "split">
+    <label >Название произведения:
+      <input [(ngModel)]="book.name" placeholder="name">
+    </label>
+  </div>
+  <div class = "split"><span>Автор: </span>{{book.author}}</div>
+  <div class = "split"><span>Год написания: </span>{{book.year}}</div>
+  <div class = "split"><span>Сюжет: </span>{{book.description}}</div>
+
+</div>
