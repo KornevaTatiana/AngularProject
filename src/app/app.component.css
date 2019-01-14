@@ -1,0 +1,31 @@
+
+h1 {
+  font-size: 2.2em;
+  color: dimgray;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+nav a {
+  font-family: fantasy;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-left: 2px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #FFDEAD;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #BC8F8F;
+}
+nav a:hover {
+  color: #607D8B;
+  background-color: #DEB887;
+}
+nav a.active {
+  color: #039be5;
+}
