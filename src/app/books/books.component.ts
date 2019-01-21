@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
-import { BookNew } from '../bookNew';
 import { BookService } from '../book.service';
 
 @Component({
@@ -12,7 +11,7 @@ import { BookService } from '../book.service';
 export class BooksComponent implements OnInit {
 
   books: Book[];
-  booksNew: BookNew[];
+  name: string;
 
   constructor(private bookService: BookService) { }
 
@@ -25,8 +24,7 @@ export class BooksComponent implements OnInit {
       .subscribe(books => this.books = books);
   }
 
-  clickAdd(id, name) {
-    // @ts-ignore
-    this.books.push(new Book(id, name));
+  clickAdd(name) {
+    this.books.push(new Book(11, name));
   }
 }

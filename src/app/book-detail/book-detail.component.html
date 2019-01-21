@@ -5,7 +5,9 @@
   <div class = "split"> <span>Название произведения: </span>
       <input [(ngModel)]="book.name" placeholder="name">
   </div>
-  <div class = "split"><span>Автор: </span>{{book.author}}</div>
+  <div class = "split"><span>Автор: </span>
+    <input [(ngModel)]="book.author" placeholder="author">
+  </div>
   <div class = "split"><span>Год написания: </span>{{book.year}}</div>
   <div class = "split"><span>Сюжет: </span>{{book.description}}</div>
 

@@ -8,20 +8,14 @@
   </li>
 </ul>
 
-
 <div class="col-xs-8">
-  <div class="form-group">
-    <label>id</label>
-    <input class="form-control" [(ngModel)]="id" />
-  </div>
-
   <div class="form-group">
     <label>Название произведения</label>
     <input class="form-control" [(ngModel)]="name" />
   </div>
 
   <div class="form-group">
-    <button class="btn" (click)="clickAdd(id, name)">Добавить произведение</button>
+    <button class="btn" (click)="clickAdd(name)">Добавить произведение</button>
   </div>
 </div>
 
