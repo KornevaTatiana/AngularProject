@@ -2,14 +2,15 @@
 
   <h2>{{book.name | uppercase}} </h2>
   <div class = "split"><span>id: </span>{{book.id}}</div>
-  <div class = "split">
-    <label >Название произведения:
+  <div class = "split"> <span>Название произведения: </span>
       <input [(ngModel)]="book.name" placeholder="name">
-    </label>
   </div>
   <div class = "split"><span>Автор: </span>{{book.author}}</div>
   <div class = "split"><span>Год написания: </span>{{book.year}}</div>
   <div class = "split"><span>Сюжет: </span>{{book.description}}</div>
+
   <button (click)="goBack()">Вернуться назад</button>
+  <button (click)="clickEdit()">Редактировать</button>
+  <button (click)="clickDelete()">Удалить</button>
 
 </div>
