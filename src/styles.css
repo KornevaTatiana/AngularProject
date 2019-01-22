@@ -12,13 +12,12 @@ h2, h3 {
 }
 body {
   margin: 2em;
-  font-family: cursive ;
-
+  font-family: cursive;
 }
 body, input[type="text"], button {
   color: #888;
-  font-family: cursive ;
-  text-align:center;
+  font-family: cursive;
+  text-align: center;
 }
 /* everywhere else */
 * {
@@ -26,3 +25,92 @@ body, input[type="text"], button {
   text-align:center;
   }
 
+.btn{
+  font-family: fantasy;
+  padding: 10px;
+  text-align: center;
+  color: dimgray;
+  max-height: 40px;
+  min-width: 40px;
+  background-color: #FFDEAD;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #DEB887;
+  cursor: pointer;
+  color:#607d8b;
+}
+.fix{
+  position: fixed;
+  right: 20px;
+  top: -10px;
+}
+.form-control{
+  size: 100px;
+  font-family: cursive;
+  color: #BC8F8F;
+}
+
+.popup-checkbox, .popup {
+  display: none;
+}
+.popup {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.popup:before {
+  display: block;
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .5;
+}
+.popup-content {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.popup-closer {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #999;
+  font-size: 20px;
+  border: 1px solid #999;
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.popup-closer:hover {
+  background-color: #eee;
+}
+.popup-checkbox:checked + .popup {
+  opacity: 1;
+  display: block;
+}

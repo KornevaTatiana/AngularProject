@@ -1,18 +1,33 @@
 <div *ngIf="book">
-
-  <h2>{{book.name | uppercase}} </h2>
+  <h2>{{book.name | uppercase}}</h2>
   <div class = "split"><span>id: </span>{{book.id}}</div>
   <div class = "split"> <span>Название произведения: </span>
-      <input [(ngModel)]="book.name" placeholder="name">
+      <input class="form-control" [(ngModel)]="book.name" placeholder="name" size = "20">
   </div>
   <div class = "split"><span>Автор: </span>
-    <input [(ngModel)]="book.author" placeholder="author">
+    <input class="form-control" [(ngModel)]="book.author" placeholder="author" size = "30">
   </div>
-  <div class = "split"><span>Год написания: </span>{{book.year}}</div>
-  <div class = "split"><span>Сюжет: </span>{{book.description}}</div>
-
-  <button (click)="goBack()">Вернуться назад</button>
-  <button (click)="clickEdit()">Редактировать</button>
-  <button (click)="clickDelete()">Удалить</button>
-
+  <div class = "split"><span>Год написания: </span>
+    <input class="form-control"[(ngModel)]="book.year" placeholder="year" size = "4">
+  </div>
+  <div class = "split"><span>Сюжет: </span>
+    <input class="form-control"[(ngModel)]="book.description" placeholder="description" size = "120">
+  </div>
 </div>
+
+<div class="popup-wrapper">
+  <input type="checkbox" class="popup-checkbox" id="popupCheckboxOne">
+  <div class="popup">
+    <div class="popup-content">
+      <label for="popupCheckboxOne" class="popup-closer">&#215;</label>
+      Вы уверены, что хотите удалить произведение из списка?
+      <div class="form-group">
+        <button class="btn" (click)="clickDelete()">Да</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class = "btn" (click)="goBack()">Вернуться назад</button>
+<button class = "btn" (click)="clickEdit()">Редактировать</button>
+<label for="popupCheckboxOne" class="btn fix">Удалить</label>

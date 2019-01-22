@@ -3,22 +3,29 @@
 <ul class="books">
   <li *ngFor="let book of books">
     <a routerLink="/detail/{{book.id}}">
-      <span class="badge">{{book.id}} </span> {{book.name}}
+      <!-- <span class="badge">{{book.year}} </span> -->
+      {{book.name}}
     </a>
   </li>
 </ul>
 
-<div class="col-xs-8">
-  <div class="form-group">
-    <label>Название произведения</label>
-    <input class="form-control" [(ngModel)]="name" />
-  </div>
-
-  <div class="form-group">
-    <button class="btn" (click)="clickAdd(name)">Добавить произведение</button>
+<div class="popup-wrapper">
+  <input type="checkbox" class="popup-checkbox" id="popupCheckboxOne">
+  <div class="popup">
+    <div class="popup-content">
+      <label for="popupCheckboxOne" class="popup-closer">&#215;</label>
+        <div class="form-group">
+          <label>Название произведения: </label> <br>
+          <input class="form-control" [(ngModel)]="name" size = "15"/>
+        </div>
+        <div class="form-group">
+          <button class="btn" (click)="clickAdd(name)">Добавить</button>
+        </div>
+    </div>
   </div>
 </div>
 
+<label for="popupCheckboxOne" class="btn fix">Добавить произведение</label>
 
 
 

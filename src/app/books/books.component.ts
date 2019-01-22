@@ -25,6 +25,7 @@ export class BooksComponent implements OnInit {
   }
 
   clickAdd(name) {
-    this.books.push(new Book(11, name));
+    this.books.push(new Book(Math.round(Math.random() * 7 + 10), name));
+    alert('Добавлено');
   }
 }

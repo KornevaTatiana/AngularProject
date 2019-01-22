@@ -34,11 +34,11 @@ export class BookDetailComponent implements OnInit {
   }
 
   clickEdit(): void {
-    alert('Edit');
+    console.log('edit');
   }
 
   clickDelete(): void {
-    this.location.back();
+    console.log('delete');
   }
 
 }
