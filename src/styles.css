@@ -50,6 +50,9 @@ body, input[type="text"], button {
   font-family: cursive;
   color: #BC8F8F;
 }
+.popup-content{
+  color: dimgray;
+}
 
 .popup-checkbox, .popup {
   display: none;
@@ -85,7 +88,7 @@ body, input[type="text"], button {
   left: 0;
   right: 0;
   margin: auto;
-  background-color: #fff;
+  background-color: linen;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 20px;

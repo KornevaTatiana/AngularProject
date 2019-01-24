@@ -68,3 +68,18 @@
   width: 9px;
   height: 9px;
 }
+.btnDel{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #999;
+  font-size: 20px;
+  border: 1px solid #999;
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}

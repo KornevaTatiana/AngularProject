@@ -1,31 +1,40 @@
 <h2>Список возможных книг</h2>
 
 <ul class="books">
-  <li *ngFor="let book of books">
-    <a routerLink="/detail/{{book.id}}">
-      <!-- <span class="badge">{{book.year}} </span> -->
-      {{book.name}}
-    </a>
+  <li *ngFor="let book of books; let i = index">
+    <a routerLink="/detail/{{book.id}}"> {{book.name}} </a>
+    <button class="popup-closer" (click)="clickDelete(i)">&#215;</button>
   </li>
 </ul>
 
 <div class="popup-wrapper">
-  <input type="checkbox" class="popup-checkbox" id="popupCheckboxOne">
+  <input type="checkbox" class="popup-checkbox" id="popupCheckboxDelete">
   <div class="popup">
     <div class="popup-content">
-      <label for="popupCheckboxOne" class="popup-closer">&#215;</label>
-        <div class="form-group">
-          <label>Название произведения: </label> <br>
-          <input class="form-control" [(ngModel)]="name" size = "15"/>
-        </div>
-        <div class="form-group">
-          <button class="btn" (click)="clickAdd(name)">Добавить</button>
-        </div>
+      <label for="popupCheckboxDelete" class="popup-closer">&#215;</label>
+      Вы уверены, что хотите удалить произведение из списка?
+      <div class="form-group">
+        <button class="btn" (click)="clickDelete(i)">Да</button>
+      </div>
     </div>
+  </div>
+  <input type="checkbox" class="popup-checkbox" id="popupCheckboxOne">
+  <div class="popup">
+    <label class="popup-content">
+      <label for="popupCheckboxOne" class="popup-closer">&#215;</label>
+      <div class="form-group">
+        <label>Название произведения: </label> <br>
+        <input class="form-control" [(ngModel)]="name" size = "15"/>
+      </div>
+      <div class="form-group">
+        <button class="btn" (click)="clickAdd(name)">Добавить</button>
+      </div>
+    </label>
   </div>
 </div>
 
 <label for="popupCheckboxOne" class="btn fix">Добавить произведение</label>
+
 
 
 

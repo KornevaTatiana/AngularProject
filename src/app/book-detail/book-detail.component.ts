@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { BookService } from '../book.service';
 
-
 @Component({
   selector: 'app-book-detail',
   templateUrl: './book-detail.component.html',
@@ -32,13 +31,4 @@ export class BookDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
-  clickEdit(): void {
-    console.log('edit');
-  }
-
-  clickDelete(): void {
-    console.log('delete');
-  }
-
 }
