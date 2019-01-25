@@ -2,22 +2,14 @@
 
 <ul class="books">
   <li *ngFor="let book of books; let i = index">
-    <a routerLink="/detail/{{book.id}}"> {{book.name}} </a>
-    <button class="popup-closer" (click)="clickDelete(i)">&#215;</button>
+    <div class="wrapper">
+      <a routerLink="/detail/{{book.id}}"> {{book.name}} </a>
+      <button class="popup-closer" (click)="clickDelete(i)">&#215;</button>
+    </div>
   </li>
 </ul>
 
 <div class="popup-wrapper">
-  <input type="checkbox" class="popup-checkbox" id="popupCheckboxDelete">
-  <div class="popup">
-    <div class="popup-content">
-      <label for="popupCheckboxDelete" class="popup-closer">&#215;</label>
-      Вы уверены, что хотите удалить произведение из списка?
-      <div class="form-group">
-        <button class="btn" (click)="clickDelete(i)">Да</button>
-      </div>
-    </div>
-  </div>
   <input type="checkbox" class="popup-checkbox" id="popupCheckboxOne">
   <div class="popup">
     <label class="popup-content">

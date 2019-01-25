@@ -11,39 +11,19 @@
 .books li {
   align-self: stretch;
   justify-content: center;
-  text-align: left;
   cursor: pointer;
   position: relative;
   margin: .05em;
-  padding: .3em 0 .3em 0.5em;
-  height: 1.6em;
-  border-radius: 4px;
+  height: 2.5em;
   flex: 1 0 auto;
 }
-.books li:nth-child(odd) {
-  background-color: #FFDEAD;
-}
-.books li:nth-child(even) {
-  background-color: #FFE4C4;
+.books li a{
+  display: block;
+  padding: .6em 0 .3em 0.5em;
+  text-align: left;
 }
 .books li:hover {
   color: #607D8B;
-  background-color: #DEB887;
-  left: .5em;
-}
-.books .badge {
-  display: inline-block;
-  font-size: small;
-  color: black;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #BC8F8F;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
 }
 .books a {
   color: #BC8F8F;
@@ -68,18 +48,20 @@
   width: 9px;
   height: 9px;
 }
-.btnDel{
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  color: #999;
-  font-size: 20px;
-  border: 1px solid #999;
-  display: block;
-  width: 20px;
-  height: 20px;
 
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
+.books .wrapper{
+  background-color: #DEB887;
+  height: 100%;
+  border-radius: 4px;
 }
+.books li:hover .wrapper{
+  cursor: pointer;
+  transform: translateX(0.5em);
+}
+.books li:nth-child(odd) .wrapper {
+  background-color: #FFDEAD;
+}
+.books li:nth-child(even) .wrapper {
+  background-color: #FFE4C4;
+}
+
