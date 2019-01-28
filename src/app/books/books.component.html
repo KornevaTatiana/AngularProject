@@ -1,7 +1,7 @@
-<h2>Список возможных книг</h2>
+<h2>Список книг</h2>
 
 <ul class="books">
-  <li *ngFor="let book of books; let i = index">
+  <li *ngFor="let book of books | search: searchStr; let i = index">
     <div class="wrapper">
       <a routerLink="/detail/{{book.id}}"> {{book.name}} </a>
       <button class="popup-closer" (click)="clickDelete(i)">&#215;</button>
@@ -16,19 +16,23 @@
       <label for="popupCheckboxOne" class="popup-closer">&#215;</label>
       <div class="form-group">
         <label>Название произведения: </label> <br>
-        <input class="form-control" [(ngModel)]="name" size = "15"/>
+        <input required class="form-control" [(ngModel)]="name" size = "15"/>
       </div>
       <div class="form-group">
-        <button class="btn" (click)="clickAdd(name)">Добавить</button>
+        <button class = "btn" (click)="clickAdd(name)">Добавить</button>
+        <button class = "btn" (click)="cleanButtonClick()" >Очистить</button>
       </div>
     </label>
   </div>
 </div>
-
 <label for="popupCheckboxOne" class="btn fix">Добавить произведение</label>
 
 
-
-
+<div class="row">
+  <div class="input-field col s6">
+    <label class="form-control" for="first_name">Поиск по названию</label> <br>
+    <input required id="first_name" class="validate" [(ngModel)] = "searchStr">
+  </div>
+</div>
 
 

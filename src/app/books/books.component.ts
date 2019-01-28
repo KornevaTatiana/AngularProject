@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
-import {BOOKS} from '../list-books';
+import { BOOKS } from '../list-books';
+
 
 @Component({
   selector: 'app-books',
@@ -14,6 +15,7 @@ export class BooksComponent implements OnInit {
   books: Book[];
   name: string;
   i: any;
+  searchStr = '';
 
   constructor(private bookService: BookService) { }
 
@@ -28,10 +30,13 @@ export class BooksComponent implements OnInit {
 
   clickAdd(name) {
     this.books.push(new Book(Math.round(Math.random() * 7 + 10), name));
-    alert('Добавлено');
   }
 
   clickDelete(i): void {
     BOOKS.splice(i, 1);
+  }
+
+  cleanButtonClick() {
+    this.name = ('');
   }
 }
