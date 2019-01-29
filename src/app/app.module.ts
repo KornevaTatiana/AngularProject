@@ -8,6 +8,7 @@ import { BooksComponent } from './books/books.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SearchPipe } from './books/search.pipe';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     BooksComponent,
     BookDetailComponent,
     MessagesComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

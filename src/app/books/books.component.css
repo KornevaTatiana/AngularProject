@@ -14,6 +14,7 @@
   cursor: pointer;
   position: relative;
   margin: .05em;
+  max-height: 41px;
   height: 2.5em;
   flex: 1 0 auto;
 }
@@ -64,4 +65,3 @@
 .books li:nth-child(even) .wrapper {
   background-color: #FFE4C4;
 }
-
